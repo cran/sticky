@@ -1,13 +1,13 @@
 Package: sticky
 Type: Package
-Title: Persist Object Attributes Across Data Operations
+Title: Persist Attributes Across Data Operations
 Description: In base R, object attributes are lost when objects are modified by
     common data operations such as subset, filter, slice, append, extract
     etc. This packages allows objects to be marked as 'sticky' and have
-    resilient attributes that persist during these operations or when inserted
-    into or extracted from recursive (i.e. list-or table-like) objects.
-Version: 0.3.3
-Date: 2016-09-25
+    attributes persisted during these operations or when inserted
+    into or extracted from recursive (i.e. list- or table-like) objects.
+Version: 0.3.6
+Date: 2016-10-03
 Authors@R: c(
       person("Christopher", "Brown", , "chris.brown@decisionpatterns.com", c("aut", "cre") ),
       person("Decision Patterns", role = "cph")
@@ -24,11 +24,11 @@ LazyData: TRUE
 Collate: 'init.R' 'sticky.R' 'append.R' 'extract1.R' 'print.R'
         'subset.R' 'zzz.R'
 VignetteBuilder: knitr
-RoxygenNote: 5.0.1
+RoxygenNote: 5.0.1.9000
 NeedsCompilation: no
-Packaged: 2016-09-26 09:52:35 UTC; cbrown
+Packaged: 2016-10-03 23:52:48 UTC; cbrown
 Author: Christopher Brown [aut, cre],
   Decision Patterns [cph]
 Maintainer: Christopher Brown <chris.brown@decisionpatterns.com>
 Repository: CRAN
-Date/Publication: 2016-09-26 14:24:04
+Date/Publication: 2016-10-04 15:13:15

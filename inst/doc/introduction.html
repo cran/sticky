@@ -12,9 +12,9 @@
 
 <meta name="author" content="Christopher Brown" />
 
-<meta name="date" content="2016-09-26" />
+<meta name="date" content="2016-10-03" />
 
-<title>Sticky: Persist Attributes Through Common Data Operations</title>
+<title>Sticky: Persistent Attributes</title>
 
 
 
@@ -68,9 +68,9 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 
 
 
-<h1 class="title toc-ignore">Sticky: Persist Attributes Through Common Data Operations</h1>
+<h1 class="title toc-ignore">Sticky: Persistent Attributes</h1>
 <h4 class="author"><em>Christopher Brown</em></h4>
-<h4 class="date"><em>2016-09-26</em></h4>
+<h4 class="date"><em>2016-10-03</em></h4>
 
 
 
@@ -86,10 +86,6 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <p>To ensure that the attributes get preserved, simply declare the object as <code>sticky</code>:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">x &lt;-<span class="st"> </span><span class="kw">sticky</span>(x)
 <span class="kw">attr</span>(x[<span class="dv">1</span>:<span class="dv">3</span>],<span class="st">'foo'</span>)        <span class="co"># 'bar' -- attribute preserved during subset</span></code></pre></div>
-<div id="in-re" class="section level3">
-<h3>In Re</h3>
-<p>That’s really all there is to it.</p>
-</div>
 </div>
 <div id="installation" class="section level2">
 <h2>Installation</h2>
