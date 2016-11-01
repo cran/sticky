@@ -12,7 +12,7 @@
 
 <meta name="author" content="Christopher Brown" />
 
-<meta name="date" content="2016-10-03" />
+<meta name="date" content="2016-10-31" />
 
 <title>Sticky: Persistent Attributes</title>
 
@@ -70,7 +70,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 
 <h1 class="title toc-ignore">Sticky: Persistent Attributes</h1>
 <h4 class="author"><em>Christopher Brown</em></h4>
-<h4 class="date"><em>2016-10-03</em></h4>
+<h4 class="date"><em>2016-10-31</em></h4>
 
 
 
@@ -86,6 +86,13 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <p>To ensure that the attributes get preserved, simply declare the object as <code>sticky</code>:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">x &lt;-<span class="st"> </span><span class="kw">sticky</span>(x)
 <span class="kw">attr</span>(x[<span class="dv">1</span>:<span class="dv">3</span>],<span class="st">'foo'</span>)        <span class="co"># 'bar' -- attribute preserved during subset</span></code></pre></div>
+<p><code>sticky()</code> works for vectors inside table-like objects ( i.e. data.frames and data.tables), preserving their attributes during table operations.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">    df &lt;-<span class="st"> </span><span class="kw">data.frame</span>( 
+      <span class="dt">sticky   =</span> <span class="kw">sticky</span>( <span class="kw">structure</span>(<span class="dv">1</span>:<span class="dv">5</span>, <span class="dt">foo=</span><span class="st">&quot;bar&quot;</span>) ),
+      <span class="dt">nonstick =</span> <span class="kw">structure</span>( letters[<span class="dv">1</span>:<span class="dv">5</span>], <span class="dt">foo=</span><span class="st">&quot;bar&quot;</span> )
+    )
+    <span class="kw">attr</span>( df[<span class="dv">2</span>:<span class="dv">3</span>,<span class="st">&quot;nonstick&quot;</span>], <span class="st">'foo'</span> )  <span class="co"># NULL</span>
+    <span class="kw">attr</span>( df[<span class="dv">2</span>:<span class="dv">3</span>,<span class="st">&quot;sticky&quot;</span>], <span class="st">'foo'</span> )    <span class="co"># bar</span></code></pre></div>
 </div>
 <div id="installation" class="section level2">
 <h2>Installation</h2>
