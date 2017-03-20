@@ -6,8 +6,8 @@ Description: In base R, object attributes are lost when objects are modified by
     etc. This packages allows objects to be marked as 'sticky' and have
     attributes persisted during these operations or when inserted
     into or extracted from recursive (i.e. list- or table-like) objects.
-Version: 0.4.0
-Date: 2016-10-31
+Version: 0.5.2
+Date: 2017-03-19
 Authors@R: c(
       person("Christopher", "Brown", , "chris.brown@decisionpatterns.com", c("aut", "cre") ),
       person("Decision Patterns", role = "cph")
@@ -24,11 +24,11 @@ LazyData: TRUE
 Collate: 'init.R' 'sticky.R' 'append.R' 'extract1.R' 'print.R'
         'subset.R' 'utils.R' 'zzz.R'
 VignetteBuilder: knitr
-RoxygenNote: 5.0.1.9000
+RoxygenNote: 6.0.1.9000
 NeedsCompilation: no
-Packaged: 2016-10-31 23:43:25 UTC; cbrown
+Packaged: 2017-03-20 05:46:27 UTC; cbrown
 Author: Christopher Brown [aut, cre],
   Decision Patterns [cph]
 Maintainer: Christopher Brown <chris.brown@decisionpatterns.com>
 Repository: CRAN
-Date/Publication: 2016-11-01 11:07:41
+Date/Publication: 2017-03-20 06:24:39 UTC

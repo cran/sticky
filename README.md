@@ -1,12 +1,12 @@
 ## Sticky: Persistent Attributes
 
-[![License](http://img.shields.io/badge/license-GPL%20%28%3E=%202%29-brightgreen.svg?style=flat)](http://www.gnu.org/licenses/gpl-2.0.html) 
-[![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/sticky)](https://cran.r-project.org/package=sticky)
-[![Downloads](https://cranlogs.r-pkg.org/badges/sticky?color=brightgreen)](http://www.r-pkg.org/pkg/sticky)
+<!--- [![License](https://img.shields.io/badge/license-GPL%20%28%3E=%202%29-brightgreen.svg?style=flat)](https://www.gnu.org/licenses/gpl-2.0.html) --> 
+[![CRAN_Status_Badge](https://www.r-pkg.org/badges/version/sticky)](https://cran.r-project.org/package=sticky)
+[![Downloads](https://cranlogs.r-pkg.org/badges/sticky?color=brightgreen)](https://www.r-pkg.org/pkg/sticky)
 
 In base R, objects lose attributes in many common operations. Marking objects 'sticky', make attributes resilent to these operations: subset, [, [[<-, append, etc. or when inserted into or extracted from list-like objects such as data frames or data tables. 
 
-Basically, sticky make object attributes behave much more like attributes in other programming languages. There isn't much to the package. The `sticky` function and it's complement, `unstick` are the only interfaces to the package.
+Basically, sticky make object attributes behave much more like attributes in other programming languages. There isn't much to the package. `sticky`/`unstick`and `sticky_all` are the only interfaces to the package.
 
 
 ## Key Functions
@@ -16,6 +16,8 @@ Basically, sticky make object attributes behave much more like attributes in oth
  - `unstick`: remove the stickiness of an object; attributes will no longer 
    persist during common data opetations
 
+ - `sticky_all` : make all elements of a recursive object sticky.
+ 
 
 ## Example
 
@@ -41,8 +43,10 @@ and data.tables), preserving their attributes during table operations.
     attr( df[2:3,"nonstick"], 'foo' )  # NULL
     attr( df[2:3,"sticky"], 'foo' )    # bar
     
-The `sticky` function (and it's complement, `unstick`) are the only 
-interface to the package.
+    
+`sticky_all` will make all members of a recursive object sticky.
+
+
 
 
 ## Installation 
@@ -71,7 +75,7 @@ There are a number of things that can be done with `sticky`:
 The issue of attribute resilence has been often asked and debated. Here are a 
 few of the most prevalent discussions.
 
-- [loss-of-attributes-despite-attempts-to-preserve-them](http://stackoverflow.com/questions/23991060/loss-of-attributes-despite-attempts-to-preserve-them)
-- [how-to-delete-a-row-from-a-data-frame-without-losing-the-attributes](http://stackoverflow.com/questions/10404224/how-to-delete-a-row-from-a-data-frame-without-losing-the-attributes)
-- [approaches-to-preserving-objects-attributes-during-extract-replace-operations](http://stackoverflow.com/questions/23841387/approaches-to-preserving-objects-attributes-during-extract-replace-operations)
-- [indexing-operation-removes-attributes](http://stackoverflow.com/questions/13432519/indexing-operation-removes-attributes)
+- [loss-of-attributes-despite-attempts-to-preserve-them](https://stackoverflow.com/questions/23991060/loss-of-attributes-despite-attempts-to-preserve-them)
+- [how-to-delete-a-row-from-a-data-frame-without-losing-the-attributes](https://stackoverflow.com/questions/10404224/how-to-delete-a-row-from-a-data-frame-without-losing-the-attributes)
+- [approaches-to-preserving-objects-attributes-during-extract-replace-operations](https://stackoverflow.com/questions/23841387/approaches-to-preserving-objects-attributes-during-extract-replace-operations)
+- [indexing-operation-removes-attributes](https://stackoverflow.com/questions/13432519/indexing-operation-removes-attributes)
